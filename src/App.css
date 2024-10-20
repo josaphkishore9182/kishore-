@@ -1,6 +1,6 @@
 .Web-Page {
   width: 100%;
-  height:500px;
+  height:fit-content;
   background-color: rgb(130, 157, 148);
   border-radius: 30px 30px;
 }
@@ -38,4 +38,42 @@
     background:white;
     color: black;
     border-radius: 20px;
+}
+.Home {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.Home_left h1 {
+  color: aliceblue;
+  font-size: 50px;
+}
+.Home_left span {
+  color:red;
+}
+.Home_left button {
+  background: red;
+  color: aliceblue;
+  font-size: 25px;
+  border: 0cap;
+  padding: 5px 5px;
+  border-radius: 5px;
+}
+.Home_right img {
+   width: 300px;
+   height: 300px;
+   filter: drop-shadow(20px 20px 20px black);
+   border-radius: 30px ;
+}
+.Footer {
+  width: 100%;
+  height: 100px;
+  background-color:  rgb(110, 143, 132);
+  border-radius: 0px 0px 30px 30px;
+}
+.Footer a {
+  font-size: 30px;
+  padding: 20px;
+  float: inline-start;
+  color: black;
 }

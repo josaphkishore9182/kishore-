@@ -8,7 +8,7 @@ const Home = () => {
          I`m <span>josaph kishore</span>
          <br/> ReactJS Developer</h1>
          <div className="Home_button">
-            <button>Contact</button>
+            <a href='https://wa.link/8pa5qi'>Contact</a>
          </div>
         </div>
         <div className="Home_right">

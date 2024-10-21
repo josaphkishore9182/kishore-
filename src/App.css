@@ -55,13 +55,15 @@
 .Home_left span {
   color:red;
 }
-.Home_left button {
+.Home_left a {
   background: red;
   color: aliceblue;
-  font-size: 25px;
+  font-size: 25px solid white;
   border: 0cap;
   padding: 5px 5px;
   border-radius: 5px;
+  text-decoration: none;
+  
 }
 .Home_right img {
    width: 300px;

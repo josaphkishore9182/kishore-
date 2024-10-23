@@ -4,53 +4,102 @@
   background-color: rgb(130, 157, 148);
   border-radius: 30px 30px;
 }
-.Nav {
+.logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+}
+.logo  {
+  display: flex;
+  align-items: center;
+
+}
+.logo h1 {
+  color: aliceblue;
+  padding: 5px;
+}
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  background:  rgb(110, 143, 132);
+  background-color: #333;
+  padding: 10px 20px;
   border-radius: 30px 30px 0px 0px;
+  position: sticky;
+  top: 0%;
 }
-.Nav_logo {
+.nav-list {
+  list-style: none;
   display: flex;
-  align-items: center;
+  margin: 0;
+  padding: 0;
 }
-#Logo {
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  color: azure;
+
+.nav-list li {
+  margin: 0 15px;
 }
-.Nav_logo img {
-   width: 50px;
-   height: 50px;
-   border-radius: 25px;
-   margin: 5px;
-}
-.Nav_link {
-  display: flex;
-  flex-wrap: wrap;
-}
-.Nav_link a {
-  font-size: 20px;
-  color: azure;
+
+.nav-list a {
+  color: white;
   text-decoration: none;
-  padding: 10px 20px 10px 20px;
+  font-size: 17px;
+
 }
-.Nav_link a:hover {
-    background:white;
-    color: black;
-    border-radius: 20px;
+.nav-list a:hover{
+background-color: aliceblue;
+color: #333;
+border-radius: 10px;
+padding: 5px 10px 5px 10px;
+}
+.menu-toggle {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.line {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 3px 0;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 767px) {
+  .logo h1 {
+    display: none;
+  }
+  .nav-list {
+      display: none; /* Hide the navigation links */
+      flex-direction:row;
+      justify-content: center;
+      margin: auto;
+      width: 90%;
+      background-color: #333;
+      position: absolute;
+      top: 80px; /* Adjust based on navbar height */
+      left: 0%;
+      right: 0%;
+      
+  }
+  .nav-list.active {
+      display: flex; /* Show the navigation links when active */
+  }
+
+  .menu-toggle {
+      display: flex; /* Show the hamburger icon */
+  }
 }
 .Home {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  background-color: rgb(183, 185, 185);
+  padding: 40px;
 }
 .Home_left h1 {
   color: aliceblue;
-  font-size: 50px;
+  font-size: 30px;
 }
 .Home_left span {
   color:red;
@@ -68,7 +117,6 @@
 .Home_right img {
    width: 300px;
    height: 300px;
-   filter: drop-shadow(20px 20px 20px black);
    border-radius: 30px ;
 }
 .Footer {

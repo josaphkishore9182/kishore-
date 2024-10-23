@@ -1,21 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react';
+// Import your CSS file
 
-const Nav = () => {
-  return (
-    <div className='Nav'>
-      <div className="Nav_logo">
-       <img src='/Images/jk logo.jpg' alt='logo'></img>
-       <h1>JOSAPH KISHORE<br/><span id='Logo'></span></h1>
-       
-      </div>
-      <div className="Nav_link">
-        <a href='#Home'>Home</a>
-        <a href='#About'>About</a>
-        <a href='#Project'>Projects</a>
-        <a href='#Contact'>Contact</a>
-      </div>
-    </div>
-  )
-}
+const MobileMenu = () => {
+    // State to manage the active class
+    const [isActive, setIsActive] = useState(false);
 
-export default Nav
+    // Function to toggle the active state
+    const toggleMenu = () => {
+        setIsActive(!isActive);
+    };
+
+    return (
+        <nav className="navbar">
+            <div className="logo">
+              <img src='/Images/jk logo.jpg' alt='logos'></img>
+              <h1>JOSAPH KISHORE</h1>
+            </div>
+            <div className="menu-toggle" id="mobile-menu" onClick={toggleMenu}>
+                <div className="line"></div>
+                <div className="line"></div>
+                <div className="line"></div>
+            </div>
+            <ul className={`nav-list ${isActive ? 'active' : ''}`}>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    );
+};
+
+export default MobileMenu;

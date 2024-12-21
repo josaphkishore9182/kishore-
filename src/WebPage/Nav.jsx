@@ -14,7 +14,7 @@ const MobileMenu = () => {
         <nav className="navbar">
             <div className="logo">
               <img src='/Images/jk logo.jpg' alt='logos'></img>
-              <h1>JOSAPH KISHORE</h1>
+              <h1>JOSAPH KISHORE KAKARLAMUDI</h1>
             </div>
             <div className="menu-toggle" id="mobile-menu" onClick={toggleMenu}>
                 <div className="line"></div>
